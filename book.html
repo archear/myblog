@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/js_support/jquery-1.10.2.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/js_support/bootstrap.min.js"></script>
+    <script src="js/js_class/content.js"></script>
+    <script src="js/js_class/note.js"></script>
+    <script src="js/js_class/book.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+<!--导航条-->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">首页</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="#">笔记本<span class="sr-only">(current)</span></a></li>
+                <!--<li><a href="#">Link</a></li>-->
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class=""><a href="/wangxia/jd/jd_index.html">京东<span class="sr-only">(current)</span></a></li>
+                <!--<li><a href="#">Link</a></li>-->
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<!--添加笔记本弹出框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">请输入添加的笔记本名称</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="myBook_newBookName" value="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="myBook_closeSaveABook">关闭
+                </button>
+                <button type="button" class="btn btn-primary" id="myBook_saveABook">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--添加笔记弹出框-->
+<div class="modal fade" id="myNote_myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myNote_smyModalLabel">请输入添加的笔记名称</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="myNote_newNoteName" value="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="myNote_closeSaveANote">关闭
+                </button>
+                <button type="button" class="btn btn-primary" id="myNote_saveANote">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!--1.笔记本区域-->
+        <div class="col-md-3">
+            <!--笔记本区域标题-->
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group ">
+                        <li class="list-group-item active">
+                            笔记本
+                        </li>
+                        <div class="btn-group" style="position: absolute;top:6px;right:25px;z-index: 100">
+                            <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                修改 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#myModal"
+                                       id="myBook_addABook">添加笔记本</a>
+
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" id="myBook_delABook">删除选中</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--笔记本列表-->
+            <div class="list-group" id="book">
+
+            </div>
+            <!--分页-->
+            <nav>
+                <ul class="pagination" id="myBook_pageBook">
+
+                </ul>
+            </nav>
+        </div>
+        <!--2.笔记区域-->
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group ">
+                        <li class="list-group-item active">
+                            笔记
+                        </li>
+                        <div class="btn-group" style="position:absolute;top:5px;right:25px;z-index:100">
+                            <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                修改 <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#myNote_myModal" id="myNote_addANote">添加笔记</a>
+
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#" id="myNote_delANote">删除选中</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!--笔记列表区-->
+            <div class="list-group" id="note">
+
+            </div>
+            <!--笔记页码列表区-->
+            <nav>
+                <ul class="pagination" id="myNote_pageNote">
+
+                </ul>
+            </nav>
+        </div>
+        <!--3.笔记内容区域-->
+        <div class="col-md-6">
+            <div class="panel panel-default" id="myContent">
+                <!--内容标题区-->
+                <div class="panel-header" style="background:#f3f3f3;font-weight: 500;font-size:16px ">
+                    <div class="panel-heading" id="myContent_nName"></div>
+                </div>
+                <button class="btn btn-success" type="submit" id="saveAContentText"
+                        style="position: absolute;top:5px;right:28px;">保存
+                </button>
+                <!--内容主体区-->
+                <div class="panel-body" id="myContent_text">
+                    <form role="form">
+                        <div class="form-group" id="myContent_form">
+                            <textarea class="form-control" rows="22" style="border:none;" id="myContent_t">
+            </textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
