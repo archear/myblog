@@ -1,0 +1,17 @@
+create table content(
+ cid int primary key,
+ nName varchar(50),
+ cText longtext,
+ create_time datetime,
+ nid int
+);
+INSERT into content values(null,' Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudant necessitatibus porro quia rerum saepe unde ut?Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut? Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut?',now(),1);
+INSERT into content values(null,' Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudant necessitatibus porro quia rerum saepe unde ut?Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut? Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut?',now(),2);
+INSERT into content values(null,' Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudant necessitatibus porro quia rerum saepe unde ut?Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut? Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut?',now(),3);
+INSERT into content values(null,'565656',' Panel',now(),86);
+INSERT into content values(null,'HTMLÑùÊ½','Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudant necessitatibus porro quia rerum saepe unde ut?Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut? Panel content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut dolor doloribus earum ratione! A blanditiis dolore dolorem dolorum eaque, fugit incidunt laudantium necessitatibus porro quia rerum saepe unde ut?',now(),1);
+INSERT into content values(null,'scsc',' Panel',now(),1);
+INSERT into content values(null,'565656',' Panel',now(),2);
+INSERT into content values(null,'565656',' Panel',now(),3);
+INSERT into content values(null,'565656',' Panel',now(),4);
+INSERT into content values(null,'565656',' Panel',now(),5);
