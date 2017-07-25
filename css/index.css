@@ -1,0 +1,16 @@
+/*÷ÿ÷√—˘ Ω*/
+ul,li,p,{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+#information{
+    width:50%;
+    min-height:400px;
+    margin:5% auto;
+    text-align: center;
+}
